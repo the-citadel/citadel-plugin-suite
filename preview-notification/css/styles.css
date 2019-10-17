@@ -1,0 +1,11 @@
+#preview-message {
+	position: fixed;
+	top: 0;
+	left: 50%;
+	padding: 5px 8px;
+	background-color: #7D2935;
+	color: #ffffff;
+	font-size: 12px;
+	z-index: 999;
+	transform: translate(-50%, 0);
+}
