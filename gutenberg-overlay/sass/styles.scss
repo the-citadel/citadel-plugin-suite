@@ -1,6 +1,10 @@
 #editor {
 	transition: background-color ease .4s;
 
+	.editor-block-list__block {
+		margin-bottom: 3em;
+	}
+
 	&.block-selected {
 		background-color: #e0e0e0;
 
@@ -21,13 +25,9 @@
 		border-radius: 0;
 	}
 
-	.block-editor-inserter__toggle:after {
+	.edit-post-header__toolbar .block-editor-inserter__toggle:after {
 		content: ' Add Block';
 		white-space: pre;
-	}
-
-	.block-list-appender .block-editor-inserter__toggle {
-		left: -8em;
 	}
 
 	.editor-history__undo:after {
@@ -53,6 +53,19 @@
 	.block-editor-block-navigation:after {
 		content: ' Structure';
 		white-space: pre;
+	}
+
+	.editor-post-title__block {
+
+		&.is-selected {
+			.editor-post-title__input {
+				outline: 1px dashed transparent;
+			}
+		}
+
+		.editor-post-title__input {
+			outline: 1px dashed #e2e4e7;
+		}
 	}
 
 	.editor-block-list__layout {
@@ -86,16 +99,16 @@
 		// Name the blocks
 		&:after {
 			content: 'Custom Block';
-			color:#767676;
-			position:absolute;
-			top:0;
-			left: -6.25rem;
-			width: 3.5rem;
-			text-align: right;
-			font-size: 0.67rem;
-			font-family:sans-serif;
-			opacity: 0.67;
-			line-height: 1.2;
+		    color: #6c7781;
+		    position: absolute;
+		    top: -20px;
+		    right: 15px;
+		    text-align: right;
+		    font-size: 11px;
+		    font-family: sans-serif;
+		    line-height: 1.2;
+		    background-color: #fff;
+		    padding: 0 5px;
 		}
 
 		&[data-type='core/paragraph']:after {

@@ -2,6 +2,9 @@
   -webkit-transition: background-color ease .4s;
   transition: background-color ease .4s;
 }
+#editor .editor-block-list__block {
+  margin-bottom: 3em;
+}
 #editor.block-selected {
   background-color: #e0e0e0;
 }
@@ -18,12 +21,9 @@
   width: auto;
   border-radius: 0;
 }
-#editor .block-editor-inserter__toggle:after {
+#editor .edit-post-header__toolbar .block-editor-inserter__toggle:after {
   content: ' Add Block';
   white-space: pre;
-}
-#editor .block-list-appender .block-editor-inserter__toggle {
-  left: -8em;
 }
 #editor .editor-history__undo:after {
   content: ' Undo';
@@ -45,6 +45,12 @@
   content: ' Structure';
   white-space: pre;
 }
+#editor .editor-post-title__block.is-selected .editor-post-title__input {
+  outline: 1px dashed transparent;
+}
+#editor .editor-post-title__block .editor-post-title__input {
+  outline: 1px dashed #e2e4e7;
+}
 #editor .editor-block-list__layout {
   border-bottom: 1px dashed #e2e4e7;
   padding-top: 2em;
@@ -59,16 +65,16 @@
 }
 #editor .editor-block-list__block:after {
   content: 'Custom Block';
-  color: #767676;
+  color: #6c7781;
   position: absolute;
-  top: 0;
-  left: -6.25rem;
-  width: 3.5rem;
+  top: -20px;
+  right: 15px;
   text-align: right;
-  font-size: 0.67rem;
+  font-size: 11px;
   font-family: sans-serif;
-  opacity: 0.67;
   line-height: 1.2;
+  background-color: #fff;
+  padding: 0 5px;
 }
 #editor .editor-block-list__block[data-type='core/paragraph']:after {
   content: 'Paragraph Block';
