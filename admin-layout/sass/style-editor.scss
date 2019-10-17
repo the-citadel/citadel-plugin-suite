@@ -1,0 +1,353 @@
+//Fonts
+$font__body: 'open-sans', helvetica, arial, sans-serif;
+$font__heading: 'poynter-oldstyle-display', 'adobe-garamond-pro', times, serif;
+$font__code: Menlo, monaco, Consolas, Lucida Console, monospace;
+$font__pre: Courier, monospace;
+
+// Base Colors
+$citadel_navy: #1F3A60;
+$citadel_blue: #3975B7;
+$pt_barracks: #CEC7BF;
+$shako: #282E36;
+$band_gold: #CDA31F;
+$officer_sash: #7D2935;
+$citadel_dark_navy: #1A3152;
+
+// Color Opacities
+$citadel_navy_80: rgba(31, 58, 96, 0.8);
+$citadel_navy_60: rgba(31, 58, 96, 0.6);
+$citadel_navy_40: rgba(31, 58, 96, 0.4);
+$citadel_navy_20: rgba(31, 58, 96, 0.2);
+
+$citadel_blue_80: rgba(57, 117, 183, 0.8);
+$citadel_blue_60: rgba(57, 117, 183, 0.6);
+$citadel_blue_40: rgba(57, 117, 183, 0.4);
+$citadel_blue_20: rgba(57, 117, 183, 0.2);
+
+$pt_barracks_80: rgba(206, 199, 191, 0.8);
+$pt_barracks_60: rgba(206, 199, 191, 0.6);
+$pt_barracks_40: rgba(206, 199, 191, 0.4);
+$pt_barracks_20: rgba(206, 199, 191, 0.2);
+
+$shako_80: rgba(40, 46, 54, 0.8);
+$shako_60: rgba(40, 46, 54, 0.6);
+$shako_40: rgba(40, 46, 54, 0.4);
+$shako_20: rgba(40, 46, 54, 0.2);
+
+$band_gold_80: rgba(205, 163, 31, 0.8);
+$band_gold_60: rgba(205, 163, 31, 0.6);
+$band_gold_40: rgba(205, 163, 31, 0.4);
+$band_gold_20: rgba(205, 163, 31, 0.2);
+
+$officer_sash_80: rgba(125, 41, 53, 0.8);
+$officer_sash_60: rgba(125, 41, 53, 0.6);
+$officer_sash_40: rgba(125, 41, 53, 0.4);
+$officer_sash_20: rgba(125, 41, 53, 0.2);
+
+// Backgrounds
+$color__background-body: #fff;
+$color__background-input: #fff;
+$color__background-button: $citadel_blue;
+$color__background-button-hover: $citadel_navy;
+$color__background_selection: $citadel_blue;
+
+// Text
+$color__text-main: $shako;
+$color__text-input: $shako_80;
+$color__text-light: $shako_60;
+
+// Links
+$color__link: $shako;
+$color__link-visited: $shako;
+$color__link-hover: $citadel_blue;
+
+.cit-navy { color: $citadel_navy; }
+.cit-navy-80 { color: $citadel_navy_80; }
+.cit-navy-60 { color: $citadel_navy_60; }
+.cit-navy-40 { color: $citadel_navy_40; }
+.cit-navy-20 { color: $citadel_navy_20; }
+.cit-navy-bg { background-color: $citadel_navy; }
+.cit-navy-bg-80 { background-color: $citadel_navy_80; }
+.cit-navy-bg-60 { background-color: $citadel_navy_60; }
+.cit-navy-bg-40 { background-color: $citadel_navy_40; }
+.cit-navy-bg-20 { background-color: $citadel_navy_20; }
+
+.cit-blue { color: $citadel_blue; }
+.cit-blue-80 { color: $citadel_blue_80; }
+.cit-blue-60 { color: $citadel_blue_60; }
+.cit-blue-40 { color: $citadel_blue_40; }
+.cit-blue-20 { color: $citadel_blue_20; }
+.cit-blue-bg { background-color: $citadel_blue; }
+.cit-blue-bg-80 { background-color: $citadel_blue_80; }
+.cit-blue-bg-60 { background-color: $citadel_blue_60; }
+.cit-blue-bg-40 { background-color: $citadel_blue_40; }
+.cit-blue-bg-20 { background-color: $citadel_blue_20; }
+
+.cit-barracks { color: $pt_barracks; }
+.cit-barracks-bg { background-color: $pt_barracks; }
+
+.cit-shako { color: $shako; }
+.cit-shako-bg { background-color: $shako; }
+
+.cit-gold { color: $band_gold; }
+.cit-gold-bg { background-color: $band_gold; }
+
+.cit-sash { color: $officer_sash; }
+.cit-sash-bg { background-color: $officer_sash; }
+
+// Elements
+body,
+#wp-content-editor-tools {
+	background: #F5F4F2;
+}
+
+a {
+	color: $citadel_blue;
+}
+
+a:hover {
+	color: $citadel_navy;
+}
+
+#adminmenu,
+#adminmenu .wp-submenu,
+#adminmenuback,
+#adminmenuwrap,
+#wpadminbar {
+	background-color: $shako;
+}
+
+#adminmenu a,
+#wpadminbar:not(.mobile) > #wp-toolbar a:focus span.ab-label,
+#wpadminbar:not(.mobile) > #wp-toolbar li:hover span.ab-label,
+#wpadminbar > #wp-toolbar li.hover span.ab-label,
+#wpadminbar .quicklinks .ab-sub-wrapper .menupop.hover > a,
+#wpadminbar .quicklinks .menupop ul li a:focus,
+#wpadminbar .quicklinks .menupop ul li a:focus strong,
+#wpadminbar .quicklinks .menupop ul li a:hover,
+#wpadminbar .quicklinks .menupop ul li a:hover strong,
+#wpadminbar .quicklinks .menupop.hover ul li a:focus,
+#wpadminbar .quicklinks .menupop.hover ul li a:hover,
+#wpadminbar .quicklinks .menupop.hover ul li div[tabindex]:focus,
+#wpadminbar .quicklinks .menupop.hover ul li div[tabindex]:hover,
+#wpadminbar li #adminbarsearch.adminbar-focused:before,
+#wpadminbar li .ab-item:focus .ab-icon:before,
+#wpadminbar li .ab-item:focus:before,
+#wpadminbar li a:focus .ab-icon:before,
+#wpadminbar li.hover .ab-icon:before, 
+#wpadminbar li.hover .ab-item:before,
+#wpadminbar li:hover #adminbarsearch:before,
+#wpadminbar li:hover .ab-icon:before,
+#wpadminbar li:hover .ab-item:before,
+#wpadminbar.nojs .quicklinks .menupop:hover ul li a:focus,
+#wpadminbar.nojs .quicklinks .menupop:hover ul li a:hover {
+	color: #fff;
+}
+
+#adminmenu .wp-has-current-submenu .wp-submenu .wp-submenu-head,
+#adminmenu .wp-menu-arrow,
+#adminmenu .wp-menu-arrow div,
+#adminmenu li.current a.menu-top,
+#adminmenu li.wp-has-current-submenu a.wp-has-current-submenu,
+.folded #adminmenu li.current.menu-top,
+.folded #adminmenu li.wp-has-current-submenu {
+	background: $citadel_blue;
+}
+
+#adminmenu .wp-submenu a:focus,
+#adminmenu .wp-submenu a:hover,
+#adminmenu a:hover,
+#adminmenu li.menu-top > a:focus,
+#adminmenu li a:focus div.wp-menu-image:before,
+#adminmenu li.opensub div.wp-menu-image:before,
+#adminmenu li:hover div.wp-menu-image:before,
+#collapse-button:focus,
+#collapse-button:hover,
+#adminmenu li.menu-top:hover,
+#adminmenu li.opensub > a.menu-top,
+#adminmenu li > a.menu-top:focus,
+#wpadminbar .ab-top-menu > li.hover > .ab-item,
+#wpadminbar.nojq .quicklinks .ab-top-menu > li > .ab-item:focus,
+#wpadminbar:not(.mobile) .ab-top-menu > li:hover > .ab-item,
+#wpadminbar:not(.mobile) .ab-top-menu > li > .ab-item:focus,
+#wpadminbar .quicklinks .ab-sub-wrapper .menupop.hover > a,
+#wpadminbar .quicklinks .menupop ul li a:focus,
+#wpadminbar .quicklinks .menupop ul li a:focus strong,
+#wpadminbar .quicklinks .menupop ul li a:hover,
+#wpadminbar .quicklinks .menupop ul li a:hover strong,
+#wpadminbar .quicklinks .menupop.hover ul li a:focus,
+#wpadminbar .quicklinks .menupop.hover ul li a:hover,
+#wpadminbar .quicklinks .menupop.hover ul li div[tabindex]:focus,
+#wpadminbar .quicklinks .menupop.hover ul li div[tabindex]:hover,
+#wpadminbar li #adminbarsearch.adminbar-focused:before,
+#wpadminbar li .ab-item:focus .ab-icon:before,
+#wpadminbar li .ab-item:focus:before,
+#wpadminbar li a:focus .ab-icon:before,
+#wpadminbar li.hover .ab-icon:before,
+#wpadminbar li:hover #adminbarsearch:before,
+#wpadminbar li:hover .ab-icon:before,
+#wpadminbar.nojs .quicklinks .menupop:hover ul li a:focus,
+#wpadminbar.nojs .quicklinks .menupop:hover ul li a:hover,
+#wpadminbar .quicklinks .ab-sub-wrapper .menupop.hover > a .blavatar,
+#wpadminbar .quicklinks li a:focus .blavatar,
+#wpadminbar .quicklinks li a:hover .blavatar {
+	background-color: $citadel_blue;
+	color: #fff;
+}
+
+ul#adminmenu a.wp-has-current-submenu:after,
+ul#adminmenu > li.current > a.current:after {
+	border-right-color: #F5F4F2;
+}
+
+#adminmenu li.wp-has-submenu.wp-not-current-submenu.opensub:hover:after {
+	border-right-color: $shako;
+}
+
+div.wp-menu-image:before {
+	transition: none;
+}
+
+.postbox,
+.postbox .hndle,
+.stuffbox .hndle
+.wp-core-ui .button,
+.wp-core-ui .button-secondary,
+#contextual-help-link-wrap,
+#screen-options-link-wrap,
+#screen-meta,
+#menu-management .menu-edit,
+#menu-settings-column .accordion-container,
+.comment-ays,
+.feature-filter,
+.imgedit-group,
+.manage-menus,
+.menu-item-handle,
+.popular-tags,
+.stuffbox,
+.widget-inside,
+.widget-top,
+.widgets-holder-wrap,
+.wp-editor-container,
+p.popular-tags,
+table.widefat {
+	border-color: #d4d5d7;
+	box-shadow: none;
+}
+#adminmenu .wp-has-current-submenu .wp-submenu,
+#adminmenu .wp-has-current-submenu .wp-submenu.sub-open,
+#adminmenu .wp-has-current-submenu.opensub .wp-submenu,
+#adminmenu a.wp-has-current-submenu:focus+.wp-submenu,
+.no-js li.wp-has-current-submenu:hover .wp-submenu {
+	background-color: #3D424A;
+}
+
+#adminmenu .wp-submenu a {
+	color: #E2DDD9;
+}
+
+#wpadminbar #wp-admin-bar-user-actions.ab-submenu {
+	padding: 6px 0;
+}
+
+#wpadminbar #wp-admin-bar-my-account.with-avatar #wp-admin-bar-user-actions > li {
+	margin: 0;
+}
+
+#wpadminbar #wp-admin-bar-my-account.with-avatar > .ab-empty-item img,
+#wpadminbar #wp-admin-bar-my-account.with-avatar > a img,
+#wp-admin-bar-user-info .avatar,
+#wpadminbar #wp-admin-bar-user-info,
+#wpadminbar #wp-admin-bar-edit-profile {
+	/*display: none;*/
+}
+
+#wpadminbar li#wp-admin-bar-citadel-logout {
+	float: right;
+}
+
+#citadel-quick-links {
+	width: 100%;
+}
+
+#citadel-quick-links * {
+	box-sizing: border-box;
+}
+
+#citadel-quick-links .quick-link {
+	display: inline-block;
+	width: calc(33.33% - 3px);
+	text-align: center;
+	padding: 10px;
+	vertical-align: top;
+	margin-bottom: 1.5em;
+}
+
+#citadel-quick-links .quick-link i {
+	font-size: 2em;
+}
+
+#citadel-quick-links .quick-link p {
+	margin: 5px 0 0;
+	line-height: 1.2em;
+}
+
+#citadel-quick-links .quick-link:nth-last-child(1),
+#citadel-quick-links .quick-link:nth-last-child(2),
+#citadel-quick-links .quick-link:nth-last-child(3) {
+	margin-bottom: 0;
+}
+
+/*----------------
+Editor Styles
+----------------*/
+
+.wp-block {
+	max-width: 849px;
+}
+
+.block-editor .editor-post-title__block .editor-post-title__input {
+	font-family: $font__heading;
+}
+
+.block-editor .editor-styles-wrapper {
+	font-family: $font__body;
+}
+
+.editor-post-title__block .editor-post-title__input,
+.wp-block-heading h2,
+.wp-block-heading h3,
+.wp-block-heading h4,
+.wp-block-heading h5,
+.wp-block-heading h6 {
+	color: $citadel_navy;
+}
+
+.editor-post-title__block .editor-post-title__input,
+.wp-block-heading h2 strong,
+.wp-block-heading h3 strong,
+.wp-block-heading h4 strong,
+.wp-block-heading h5 strong,
+.wp-block-heading h6 strong {
+	font-weight: 700;
+}
+
+.block-editor .editor-styles-wrapper p {
+	font-size: 18px;
+	color: $shako;
+}
+
+.block-editor-rich-text__editable a {
+	border-bottom: 1px solid $citadel_blue;
+	color: $shako;
+	text-decoration: none;
+
+	&:hover {
+		color: $citadel_blue;
+		text-decoration: none;
+	}
+}
+
+.wp-block-quote {
+	border-left-color: $citadel_blue;
+}
