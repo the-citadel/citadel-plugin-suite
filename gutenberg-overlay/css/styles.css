@@ -1,0 +1,317 @@
+#editor {
+  -webkit-transition: background-color ease .4s;
+  transition: background-color ease .4s;
+}
+#editor.block-selected {
+  background-color: #e0e0e0;
+}
+#editor.block-selected .editor-block-list__block.is-selected .editor-block-list__block-edit:before {
+  background-color: white;
+  z-index: -1;
+}
+#editor .editor-post-publish-button:after {
+  content: ' / Save Edits';
+  white-space: pre;
+}
+#editor .block-editor-inserter__toggle {
+  height: auto;
+  width: auto;
+  border-radius: 0;
+}
+#editor .block-editor-inserter__toggle:after {
+  content: ' Add Block';
+  white-space: pre;
+}
+#editor .block-list-appender .block-editor-inserter__toggle {
+  left: -8em;
+}
+#editor .editor-history__undo:after {
+  content: ' Undo';
+  white-space: pre;
+}
+#editor .editor-history__redo:after {
+  content: ' Redo';
+  white-space: pre;
+}
+#editor .block-editor-page .edit-post-sidebar__panel-tab:before {
+  content: 'Page / ';
+  white-space: pre;
+}
+#editor .table-of-contents .components-icon-button:after {
+  content: ' Stats';
+  white-space: pre;
+}
+#editor .block-editor-block-navigation:after {
+  content: ' Structure';
+  white-space: pre;
+}
+#editor .editor-block-list__layout {
+  border-bottom: 1px dashed #e2e4e7;
+  padding-top: 2em;
+  padding-bottom: 2em;
+  position: relative;
+}
+#editor .editor-block-list__block.is-selected .editor-block-list__block-edit:before {
+  outline-color: transparent;
+}
+#editor .editor-block-list__block .editor-block-list__block-edit:before {
+  outline: 1px dashed #e2e4e7;
+}
+#editor .editor-block-list__block:after {
+  content: 'Custom Block';
+  color: #767676;
+  position: absolute;
+  top: 0;
+  left: -6.25rem;
+  width: 3.5rem;
+  text-align: right;
+  font-size: 0.67rem;
+  font-family: sans-serif;
+  opacity: 0.67;
+  line-height: 1.2;
+}
+#editor .editor-block-list__block[data-type='core/paragraph']:after {
+  content: 'Paragraph Block';
+}
+#editor .editor-block-list__block[data-type='core/quote']:after {
+  content: 'Quote Block';
+}
+#editor .editor-block-list__block[data-type='core/image']:after {
+  content: 'Image Block';
+}
+#editor .editor-block-list__block[data-type='core/heading']:after {
+  content: 'Heading Block';
+}
+#editor .editor-block-list__block[data-type='core/gallery']:after {
+  content: 'Gallery Block';
+}
+#editor .editor-block-list__block[data-type='core/list']:after {
+  content: 'List Block';
+}
+#editor .editor-block-list__block[data-type='core/audio']:after {
+  content: 'Audio Block';
+}
+#editor .editor-block-list__block[data-type='core/cover']:after {
+  content: 'Cover Block';
+}
+#editor .editor-block-list__block[data-type='core/file']:after {
+  content: 'File Block';
+}
+#editor .editor-block-list__block[data-type='core/video']:after {
+  content: 'Video Block';
+}
+#editor .editor-block-list__block[data-type='core/code']:after {
+  content: 'Code Block';
+}
+#editor .editor-block-list__block[data-type='core/classic']:after {
+  content: 'Classic Block';
+}
+#editor .editor-block-list__block[data-type='core/html']:after {
+  content: 'Custom HTML Block';
+}
+#editor .editor-block-list__block[data-type='core/preformatted']:after {
+  content: 'Preformatted Block';
+}
+#editor .editor-block-list__block[data-type='core/pullquote']:after {
+  content: 'Pullquote Block';
+}
+#editor .editor-block-list__block[data-type='core/table']:after {
+  content: 'Table Block';
+}
+#editor .editor-block-list__block[data-type='core/verse']:after {
+  content: 'Verse Block';
+}
+#editor .editor-block-list__block[data-type='core/button']:after {
+  content: 'Button Block';
+}
+#editor .editor-block-list__block[data-type='core/columns']:after {
+  content: 'Columns Block';
+}
+#editor .editor-block-list__block[data-type='core/media-text']:after {
+  content: 'Media & Text Block';
+}
+#editor .editor-block-list__block[data-type='core/more']:after {
+  content: 'More Block';
+}
+#editor .editor-block-list__block[data-type='core/page-break']:after {
+  content: 'Page Break Block';
+}
+#editor .editor-block-list__block[data-type='core/spacer']:after {
+  content: 'Spacer Block';
+}
+#editor .editor-block-list__block[data-type='core/shortcode']:after {
+  content: 'Shortcode Block';
+}
+#editor .editor-block-list__block[data-type='core/archives']:after {
+  content: 'Archives Block';
+}
+#editor .editor-block-list__block[data-type='core/calendar']:after {
+  content: 'Calendar Block';
+}
+#editor .editor-block-list__block[data-type='core/categories']:after {
+  content: 'Categories Block';
+}
+#editor .editor-block-list__block[data-type='core/latest-comments']:after {
+  content: 'Latest Comments Block';
+}
+#editor .editor-block-list__block[data-type='core/latest-posts']:after {
+  content: 'Latest Posts Block';
+}
+#editor .editor-block-list__block[data-type='core/rss']:after {
+  content: 'RSS Block';
+}
+#editor .editor-block-list__block[data-type='core/search']:after {
+  content: 'Search Block';
+}
+#editor .editor-block-list__block[data-type='core/tag-cloud']:after {
+  content: 'Tag Cloud Block';
+}
+#editor .editor-block-list__block[data-type='core/embed']:after {
+  content: 'Embed Block';
+}
+#editor .editor-block-list__block[data-type='core-embed/twitter']:after {
+  content: 'Twitter Block';
+}
+#editor .editor-block-list__block[data-type='core-embed/youtube']:after {
+  content: 'YouTube Block';
+}
+#editor .editor-block-list__block[data-type='core-embed/facebook']:after {
+  content: 'Facebook Block';
+}
+#editor .editor-block-list__block[data-type='core-embed/instagram']:after {
+  content: 'Instagram Block';
+}
+#editor .editor-block-list__block[data-type='core-embed/wordpress']:after {
+  content: 'WordPress Block';
+}
+#editor .editor-block-list__block[data-type='core-embed/soundcloud']:after {
+  content: 'Soundcloud Block';
+}
+#editor .editor-block-list__block[data-type='core-embed/spotify']:after {
+  content: 'Spotify Block';
+}
+#editor .editor-block-list__block[data-type='core-embed/flickr']:after {
+  content: 'Flickr Block';
+}
+#editor .editor-block-list__block[data-type='core-embed/vimeo']:after {
+  content: 'Vimeo Block';
+}
+#editor .editor-block-list__block[data-type='core-embed/animoto']:after {
+  content: 'Animoto Block';
+}
+#editor .editor-block-list__block[data-type='core-embed/cloudup']:after {
+  content: 'CloudUp Block';
+}
+#editor .editor-block-list__block[data-type='core-embed/collegehumor']:after {
+  content: 'CollegeHumor Block';
+}
+#editor .editor-block-list__block[data-type='core-embed/imgur']:after {
+  content: 'Imgur Block';
+}
+#editor .editor-block-list__block[data-type='core-embed/issuu']:after {
+  content: 'Issuu Block';
+}
+#editor .editor-block-list__block[data-type='core-embed/hulu']:after {
+  content: 'Hulu Block';
+}
+#editor .editor-block-list__block[data-type='core-embed/kickstarter']:after {
+  content: 'Kickstarter Block';
+}
+#editor .editor-block-list__block[data-type='core-embed/meetup']:after {
+  content: 'Meetup.com Block';
+}
+#editor .editor-block-list__block[data-type='core-embed/mixcloud']:after {
+  content: 'Mixcloud Block';
+}
+#editor .editor-block-list__block[data-type='core-embed/reddit']:after {
+  content: 'Reddit Block';
+}
+#editor .editor-block-list__block[data-type='core-embed/reverbnation']:after {
+  content: 'ReverbNation Block';
+}
+#editor .editor-block-list__block[data-type='core-embed/screencast']:after {
+  content: 'Screencast Block';
+}
+#editor .editor-block-list__block[data-type='core-embed/scribd']:after {
+  content: 'Scribd Block';
+}
+#editor .editor-block-list__block[data-type='core-embed/slideshare']:after {
+  content: 'Slideshare Block';
+}
+#editor .editor-block-list__block[data-type='core-embed/smugmug']:after {
+  content: 'SmugMug Block';
+}
+#editor .editor-block-list__block[data-type='core-embed/speaker-deck']:after {
+  content: 'Speaker Deck Block';
+}
+#editor .editor-block-list__block[data-type='core-embed/ted']:after {
+  content: 'TED Block';
+}
+#editor .editor-block-list__block[data-type='core-embed/tumblr']:after {
+  content: 'Tunblr Block';
+}
+#editor .editor-block-list__block[data-type='core-embed/videopress']:after {
+  content: 'VideoPress Block';
+}
+#editor .editor-block-list__block[data-type='core-embed/wordpress-tv']:after {
+  content: 'WordPress.tv Block';
+}
+#editor .editor-block-list__block[data-type='core-embed/amazon-kindle']:after {
+  content: 'Amazon Kindle Block';
+}
+
+.post-type-page #editor .edit-post-sidebar__panel-tab[data-label='Document']:before {
+  content: 'Page / ';
+  white-space: pre;
+  position: relative;
+}
+.post-type-page #editor .editor-post-title {
+  border-bottom: 1px dashed #e2e4e7;
+  position: relative;
+}
+.post-type-page #editor .editor-post-title:before {
+  content: 'Page Title';
+  color: #767676;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  padding: 5px 10px;
+  font-size: 12px;
+}
+.post-type-page #editor .editor-post-title:after {
+  content: 'Page Content';
+  color: #767676;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  padding: 5px 10px;
+  font-size: 12px;
+}
+
+.post-type-post #editor .edit-post-sidebar__panel-tab[data-label='Document']:before {
+  content: 'Post / ';
+  white-space: pre;
+  position: relative;
+}
+.post-type-post #editor .editor-post-title {
+  border-bottom: 1px dashed #e2e4e7;
+  position: relative;
+}
+.post-type-post #editor .editor-post-title:before {
+  content: 'Post Title';
+  color: #767676;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  padding: 5px 10px;
+  font-size: 12px;
+}
+.post-type-post #editor .editor-post-title:after {
+  content: 'Post Content';
+  color: #767676;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  padding: 5px 10px;
+  font-size: 12px;
+}

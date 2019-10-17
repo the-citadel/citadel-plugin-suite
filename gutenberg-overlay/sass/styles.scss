@@ -1,0 +1,466 @@
+#editor {
+	transition: background-color ease .4s;
+
+	&.block-selected {
+		background-color: #e0e0e0;
+
+		.editor-block-list__block.is-selected .editor-block-list__block-edit:before {
+			background-color: white;
+			z-index: -1;
+		}
+	}
+
+	.editor-post-publish-button:after {
+		content: ' / Save Edits';
+		white-space: pre;
+	}
+
+	.block-editor-inserter__toggle {
+		height: auto;
+		width: auto;
+		border-radius: 0;
+	}
+
+	.block-editor-inserter__toggle:after {
+		content: ' Add Block';
+		white-space: pre;
+	}
+
+	.block-list-appender .block-editor-inserter__toggle {
+		left: -8em;
+	}
+
+	.editor-history__undo:after {
+		content: ' Undo';
+		white-space: pre;
+	}
+
+	.editor-history__redo:after {
+		content: ' Redo';
+		white-space: pre;
+	}
+
+	.block-editor-page .edit-post-sidebar__panel-tab:before {
+		content: 'Page / ';
+		white-space: pre;
+	}
+
+	.table-of-contents .components-icon-button:after {
+		content: ' Stats';
+		white-space: pre;
+	}
+
+	.block-editor-block-navigation:after {
+		content: ' Structure';
+		white-space: pre;
+	}
+
+	.editor-block-list__layout {
+		border-bottom: 1px dashed #e2e4e7;
+		padding-top: 2em;
+		padding-bottom: 2em;
+		position: relative;
+	}
+
+	.editor-block-list__block {
+
+		&.is-selected .editor-block-list__block-edit:before {
+			outline-color: transparent;
+		}
+
+		&.is-selected:before {
+			// content: "";
+			// border: 0;
+			// border-top: 10px solid transparent;
+			// border-bottom: 10px solid transparent;
+			// border-right: 10px solid white;
+			// position: absolute;
+			// width: 0;
+			// height: 0;
+		}
+
+		.editor-block-list__block-edit:before {
+			outline: 1px dashed #e2e4e7;
+		}
+
+		// Name the blocks
+		&:after {
+			content: 'Custom Block';
+			color:#767676;
+			position:absolute;
+			top:0;
+			left: -6.25rem;
+			width: 3.5rem;
+			text-align: right;
+			font-size: 0.67rem;
+			font-family:sans-serif;
+			opacity: 0.67;
+			line-height: 1.2;
+		}
+
+		&[data-type='core/paragraph']:after {
+			content: 'Paragraph Block';
+		}
+
+		&[data-type='core/quote']:after {
+			content: 'Quote Block';
+		}
+		
+		&[data-type='core/image']:after {
+			content: 'Image Block';
+		}
+		
+		&[data-type='core/heading']:after {
+			content: 'Heading Block';
+		}
+		
+		&[data-type='core/gallery']:after {
+			content: 'Gallery Block';
+		}
+		
+		&[data-type='core/list']:after {
+			content: 'List Block';
+		}
+		
+		&[data-type='core/audio']:after {
+			content: 'Audio Block';
+		}
+		
+		&[data-type='core/cover']:after {
+			content: 'Cover Block';
+		}
+		
+		&[data-type='core/file']:after {
+			content: 'File Block';
+		}
+		
+		&[data-type='core/video']:after {
+			content: 'Video Block';
+		}
+		
+		&[data-type='core/code']:after {
+			content: 'Code Block';
+		}
+		
+		&[data-type='core/classic']:after {
+			content: 'Classic Block';
+		}
+		
+		&[data-type='core/html']:after {
+			content: 'Custom HTML Block';
+		}
+		
+		&[data-type='core/preformatted']:after {
+			content: 'Preformatted Block';
+		}
+		
+		&[data-type='core/pullquote']:after {
+			content: 'Pullquote Block';
+		}
+		
+		&[data-type='core/table']:after {
+			content: 'Table Block';
+		}
+		
+		&[data-type='core/verse']:after {
+			content: 'Verse Block';
+		}
+		
+		&[data-type='core/button']:after {
+			content: 'Button Block';
+		}
+		
+		&[data-type='core/columns']:after {
+			content: 'Columns Block';
+		}
+		
+		&[data-type='core/media-text']:after {
+			content: 'Media & Text Block';
+		}
+		
+		&[data-type='core/more']:after {
+			content: 'More Block';
+		}
+		
+		&[data-type='core/page-break']:after {
+			content: 'Page Break Block';
+		}
+		
+		&[data-type='core/spacer']:after {
+			content: 'Spacer Block';
+		}
+		
+		&[data-type='core/shortcode']:after {
+			content: 'Shortcode Block';
+		}
+		
+		&[data-type='core/archives']:after {
+			content: 'Archives Block';
+		}
+		
+		&[data-type='core/calendar']:after {
+			content: 'Calendar Block';
+		}
+		
+		&[data-type='core/categories']:after {
+			content: 'Categories Block';
+		}
+		
+		&[data-type='core/latest-comments']:after {
+			content: 'Latest Comments Block';
+		}
+		
+		&[data-type='core/latest-posts']:after {
+			content: 'Latest Posts Block';
+		}
+		
+		&[data-type='core/rss']:after {
+			content: 'RSS Block';
+		}
+		
+		&[data-type='core/search']:after {
+			content: 'Search Block';
+		}
+		
+		&[data-type='core/tag-cloud']:after {
+			content: 'Tag Cloud Block';
+		}
+		
+		&[data-type='core/embed']:after {
+			content: 'Embed Block';
+		}
+		
+		&[data-type='core-embed/twitter']:after {
+			content: 'Twitter Block';
+		}
+		
+		&[data-type='core-embed/youtube']:after {
+			content: 'YouTube Block';
+		}
+		
+		&[data-type='core-embed/facebook']:after {
+			content: 'Facebook Block';
+		}
+		
+		&[data-type='core-embed/instagram']:after {
+			content: 'Instagram Block';
+		}
+		
+		&[data-type='core-embed/wordpress']:after {
+			content: 'WordPress Block';
+		}
+		
+		&[data-type='core-embed/soundcloud']:after {
+			content: 'Soundcloud Block';
+		}
+		
+		&[data-type='core-embed/spotify']:after {
+			content: 'Spotify Block';
+		}
+		
+		&[data-type='core-embed/flickr']:after {
+			content: 'Flickr Block';
+		}
+		
+		&[data-type='core-embed/vimeo']:after {
+			content: 'Vimeo Block';
+		}
+		
+		&[data-type='core-embed/animoto']:after {
+			content: 'Animoto Block';
+		}
+		
+		&[data-type='core-embed/cloudup']:after {
+			content: 'CloudUp Block';
+		}
+		
+		&[data-type='core-embed/collegehumor']:after {
+			content: 'CollegeHumor Block';
+		}
+		
+		&[data-type='core-embed/imgur']:after {
+			content: 'Imgur Block';
+		}
+		
+		&[data-type='core-embed/issuu']:after {
+			content: 'Issuu Block';
+		}
+		
+		&[data-type='core-embed/hulu']:after {
+			content: 'Hulu Block';
+		}
+		
+		&[data-type='core-embed/kickstarter']:after {
+			content: 'Kickstarter Block';
+		}
+		
+		&[data-type='core-embed/meetup']:after {
+			content: 'Meetup.com Block';
+		}
+		
+		&[data-type='core-embed/mixcloud']:after {
+			content: 'Mixcloud Block';
+		}
+		
+		&[data-type='core-embed/reddit']:after {
+			content: 'Reddit Block';
+		}
+		
+		&[data-type='core-embed/reverbnation']:after {
+			content: 'ReverbNation Block';
+		}
+		
+		&[data-type='core-embed/screencast']:after {
+			content: 'Screencast Block';
+		}
+		
+		&[data-type='core-embed/scribd']:after {
+			content: 'Scribd Block';
+		}
+		
+		&[data-type='core-embed/slideshare']:after {
+			content: 'Slideshare Block';
+		}
+		
+		&[data-type='core-embed/smugmug']:after {
+			content: 'SmugMug Block';
+		}
+		
+		&[data-type='core-embed/speaker-deck']:after {
+			content: 'Speaker Deck Block';
+		}
+		
+		&[data-type='core-embed/ted']:after {
+			content: 'TED Block';
+		}
+		
+		&[data-type='core-embed/tumblr']:after {
+			content: 'Tunblr Block';
+		}
+		
+		&[data-type='core-embed/videopress']:after {
+			content: 'VideoPress Block';
+		}
+		
+		&[data-type='core-embed/wordpress-tv']:after {
+			content: 'WordPress.tv Block';
+		}
+		
+		&[data-type='core-embed/amazon-kindle']:after {
+			content: 'Amazon Kindle Block';
+		}
+	}
+		
+}
+
+.post-type-page #editor {
+	.edit-post-sidebar__panel-tab[data-label='Document']:before {
+		content: 'Page / ';
+		white-space: pre;
+		position: relative;
+	}
+
+	.editor-post-title {
+		border-bottom: 1px dashed #e2e4e7;
+		position: relative;
+
+		&:before {
+			content: 'Page Title';
+			color:#767676;
+			position: absolute;
+		    bottom: 0;
+		    left: 0;
+		    padding: 5px 10px;
+		    font-size: 12px;
+		}
+
+		&:after {
+			content: 'Page Content';
+			color:#767676;
+			position: absolute;
+		    top: 100%;
+		    left: 0;
+		    padding: 5px 10px;
+		    font-size: 12px;
+		}
+	}
+
+	// .editor-block-list__layout {
+
+	// 	&:before {
+	// 		content: 'Page Content';
+	// 		color:#767676;
+	// 		position: absolute;
+	// 	    bottom: 0;
+	// 	    left: 0;
+	// 	    padding: 5px 10px;
+	// 	    font-size: 12px;
+	// 	}
+
+	// 	&:after {
+	// 		content: 'Page Metaboxes';
+	// 		color:#767676;
+	// 		position: absolute;
+	// 	    top: 100%;
+	// 	    left: 0;
+	// 	    padding: 5px 10px;
+	// 	    font-size: 12px;
+	// 	}
+	// }
+}
+
+.post-type-post #editor {
+	.edit-post-sidebar__panel-tab[data-label='Document']:before {
+		content: 'Post / ';
+		white-space: pre;
+		position: relative;
+	}
+
+	.editor-post-title {
+		border-bottom: 1px dashed #e2e4e7;
+		position: relative;
+
+		&:before {
+			content: 'Post Title';
+			color:#767676;
+			position: absolute;
+		    bottom: 0;
+		    left: 0;
+		    padding: 5px 10px;
+		    font-size: 12px;
+		}
+
+		&:after {
+			content: 'Post Content';
+			color:#767676;
+			position: absolute;
+		    top: 100%;
+		    left: 0;
+		    padding: 5px 10px;
+		    font-size: 12px;
+		}
+	}
+
+	// .editor-block-list__layout {
+
+	// 	&:before {
+	// 		content: 'Post Content';
+	// 		color:#767676;
+	// 		position: absolute;
+	// 	    bottom: 0;
+	// 	    left: 0;
+	// 	    padding: 5px 10px;
+	// 	    font-size: 12px;
+	// 	}
+
+	// 	&:after {
+	// 		content: 'Post Metaboxes';
+	// 		color:#767676;
+	// 		position: absolute;
+	// 	    top: 100%;
+	// 	    left: 0;
+	// 	    padding: 5px 10px;
+	// 	    font-size: 12px;
+	// 	}
+	// }
+}
