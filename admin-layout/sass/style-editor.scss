@@ -321,6 +321,10 @@ Editor Styles
 .wp-block-heading h5,
 .wp-block-heading h6 {
 	color: $citadel_navy;
+
+	&:focus {
+		color: $citadel_navy;
+	}
 }
 
 .editor-post-title__block .editor-post-title__input,
@@ -350,4 +354,21 @@ Editor Styles
 
 .wp-block-quote {
 	border-left-color: $citadel_blue;
+}
+
+.edit-post-visual-editor {
+	padding-top: 0;
+}
+
+.editor-post-title {
+	background-color: $pt_barracks_20;
+	padding-top: 2em;
+
+	textarea {
+		text-align: center;
+	}
+}
+
+.components-editor-notices__dismissible .components-notice {
+	margin-bottom: 0;
 }
