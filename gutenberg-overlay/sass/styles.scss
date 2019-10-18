@@ -3,6 +3,10 @@
 
 	.editor-block-list__block {
 		margin-bottom: 3em;
+
+		&:last-of-type {
+			margin-bottom: 0;
+		}
 	}
 
 	&.block-selected {
@@ -64,12 +68,12 @@
 		}
 
 		.editor-post-title__input {
-			outline: 1px dashed #e2e4e7;
+			outline: 1px dashed #a2aab2;
 		}
 	}
 
 	.editor-block-list__layout {
-		border-bottom: 1px dashed #e2e4e7;
+		border-bottom: 1px dashed #a2aab2;
 		padding-top: 2em;
 		padding-bottom: 2em;
 		position: relative;
@@ -93,22 +97,22 @@
 		}
 
 		.editor-block-list__block-edit:before {
-			outline: 1px dashed #e2e4e7;
+			outline: 1px dashed #a2aab2;
 		}
 
 		// Name the blocks
 		&:after {
 			content: 'Custom Block';
-		    color: #6c7781;
-		    position: absolute;
-		    top: -20px;
-		    right: 15px;
-		    text-align: right;
-		    font-size: 11px;
-		    font-family: sans-serif;
-		    line-height: 1.2;
-		    background-color: #fff;
-		    padding: 0 5px;
+			color: #6c7781;
+			position: absolute;
+			top: -20px;
+			right: 15px;
+			text-align: right;
+			font-size: 11px;
+			font-family: sans-serif;
+			line-height: 1.2;
+			background-color: #fff;
+			padding: 0 5px;
 		}
 
 		&[data-type='core/paragraph']:after {
@@ -374,52 +378,52 @@
 	}
 
 	.editor-post-title {
-		border-bottom: 1px dashed #e2e4e7;
+		border-bottom: 1px dashed #a2aab2;
 		position: relative;
 
 		&:before {
 			content: 'Page Title';
 			color:#767676;
 			position: absolute;
-		    bottom: 0;
-		    left: 0;
-		    padding: 5px 10px;
-		    font-size: 12px;
+			bottom: 0;
+			left: 0;
+			padding: 5px 10px;
+			font-size: 12px;
 		}
 
 		&:after {
 			content: 'Page Content';
 			color:#767676;
 			position: absolute;
-		    top: 100%;
-		    left: 0;
-		    padding: 5px 10px;
-		    font-size: 12px;
+			top: 100%;
+			left: 0;
+			padding: 5px 10px;
+			font-size: 12px;
 		}
 	}
 
-	// .editor-block-list__layout {
+	.editor-block-list__layout {
 
-	// 	&:before {
-	// 		content: 'Page Content';
-	// 		color:#767676;
-	// 		position: absolute;
-	// 	    bottom: 0;
-	// 	    left: 0;
-	// 	    padding: 5px 10px;
-	// 	    font-size: 12px;
-	// 	}
+		&:before {
+			content: 'Page Content';
+			color:#767676;
+			position: absolute;
+			bottom: 0;
+			left: 0;
+			padding: 5px 10px;
+			font-size: 12px;
+		}
 
-	// 	&:after {
-	// 		content: 'Page Metaboxes';
-	// 		color:#767676;
-	// 		position: absolute;
-	// 	    top: 100%;
-	// 	    left: 0;
-	// 	    padding: 5px 10px;
-	// 	    font-size: 12px;
-	// 	}
-	// }
+		&:after {
+			content: 'Page Metaboxes';
+			color:#767676;
+			position: absolute;
+			top: 100%;
+			left: 0;
+			padding: 5px 10px;
+			font-size: 12px;
+		}
+	}
 }
 
 .post-type-post #editor {
@@ -430,50 +434,50 @@
 	}
 
 	.editor-post-title {
-		border-bottom: 1px dashed #e2e4e7;
+		border-bottom: 1px dashed #a2aab2;
 		position: relative;
 
 		&:before {
 			content: 'Post Title';
 			color:#767676;
 			position: absolute;
-		    bottom: 0;
-		    left: 0;
-		    padding: 5px 10px;
-		    font-size: 12px;
+			bottom: 0;
+			left: 0;
+			padding: 5px 10px;
+			font-size: 11px;
 		}
 
 		&:after {
 			content: 'Post Content';
 			color:#767676;
 			position: absolute;
-		    top: 100%;
-		    left: 0;
-		    padding: 5px 10px;
-		    font-size: 12px;
+			top: 100%;
+			left: 0;
+			padding: 5px 10px;
+			font-size: 11px;
 		}
 	}
 
-	// .editor-block-list__layout {
+	.editor-block-list__layout {
 
-	// 	&:before {
-	// 		content: 'Post Content';
-	// 		color:#767676;
-	// 		position: absolute;
-	// 	    bottom: 0;
-	// 	    left: 0;
-	// 	    padding: 5px 10px;
-	// 	    font-size: 12px;
-	// 	}
+		&:before {
+			content: 'Post Content';
+			color:#767676;
+			position: absolute;
+			bottom: 0;
+			left: 0;
+			padding: 5px 10px;
+			font-size: 11px;
+		}
 
-	// 	&:after {
-	// 		content: 'Post Metaboxes';
-	// 		color:#767676;
-	// 		position: absolute;
-	// 	    top: 100%;
-	// 	    left: 0;
-	// 	    padding: 5px 10px;
-	// 	    font-size: 12px;
-	// 	}
-	// }
+		&:after {
+			content: 'Post Metaboxes';
+			color:#767676;
+			position: absolute;
+			top: 100%;
+			left: 0;
+			padding: 5px 10px;
+			font-size: 11px;
+		}
+	}
 }

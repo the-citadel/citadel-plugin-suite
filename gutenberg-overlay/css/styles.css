@@ -5,6 +5,9 @@
 #editor .editor-block-list__block {
   margin-bottom: 3em;
 }
+#editor .editor-block-list__block:last-of-type {
+  margin-bottom: 0;
+}
 #editor.block-selected {
   background-color: #e0e0e0;
 }
@@ -49,10 +52,10 @@
   outline: 1px dashed transparent;
 }
 #editor .editor-post-title__block .editor-post-title__input {
-  outline: 1px dashed #e2e4e7;
+  outline: 1px dashed #a2aab2;
 }
 #editor .editor-block-list__layout {
-  border-bottom: 1px dashed #e2e4e7;
+  border-bottom: 1px dashed #a2aab2;
   padding-top: 2em;
   padding-bottom: 2em;
   position: relative;
@@ -61,7 +64,7 @@
   outline-color: transparent;
 }
 #editor .editor-block-list__block .editor-block-list__block-edit:before {
-  outline: 1px dashed #e2e4e7;
+  outline: 1px dashed #a2aab2;
 }
 #editor .editor-block-list__block:after {
   content: 'Custom Block';
@@ -272,7 +275,7 @@
   position: relative;
 }
 .post-type-page #editor .editor-post-title {
-  border-bottom: 1px dashed #e2e4e7;
+  border-bottom: 1px dashed #a2aab2;
   position: relative;
 }
 .post-type-page #editor .editor-post-title:before {
@@ -293,6 +296,24 @@
   padding: 5px 10px;
   font-size: 12px;
 }
+.post-type-page #editor .editor-block-list__layout:before {
+  content: 'Page Content';
+  color: #767676;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  padding: 5px 10px;
+  font-size: 12px;
+}
+.post-type-page #editor .editor-block-list__layout:after {
+  content: 'Page Metaboxes';
+  color: #767676;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  padding: 5px 10px;
+  font-size: 12px;
+}
 
 .post-type-post #editor .edit-post-sidebar__panel-tab[data-label='Document']:before {
   content: 'Post / ';
@@ -300,7 +321,7 @@
   position: relative;
 }
 .post-type-post #editor .editor-post-title {
-  border-bottom: 1px dashed #e2e4e7;
+  border-bottom: 1px dashed #a2aab2;
   position: relative;
 }
 .post-type-post #editor .editor-post-title:before {
@@ -310,7 +331,7 @@
   bottom: 0;
   left: 0;
   padding: 5px 10px;
-  font-size: 12px;
+  font-size: 11px;
 }
 .post-type-post #editor .editor-post-title:after {
   content: 'Post Content';
@@ -319,5 +340,23 @@
   top: 100%;
   left: 0;
   padding: 5px 10px;
-  font-size: 12px;
+  font-size: 11px;
+}
+.post-type-post #editor .editor-block-list__layout:before {
+  content: 'Post Content';
+  color: #767676;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  padding: 5px 10px;
+  font-size: 11px;
+}
+.post-type-post #editor .editor-block-list__layout:after {
+  content: 'Post Metaboxes';
+  color: #767676;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  padding: 5px 10px;
+  font-size: 11px;
 }
