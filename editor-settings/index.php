@@ -1,7 +1,5 @@
 <?php 
 
-defined( 'ABSPATH' ) || exit;
-
 add_filter( 'allowed_block_types', 'citadel_allowed_block_types', 10, 2 );
  
 function citadel_allowed_block_types( $allowed_blocks, $post ) {
@@ -32,5 +30,14 @@ function citadel_allowed_block_types( $allowed_blocks, $post ) {
 	return $allowed_blocks;
  
 }
+
+function citadel_disable_editor_settings() {
+    add_theme_support( 'editor-color-palette' );
+	add_theme_support( 'disable-custom-colors' );
+	add_theme_support( 'disable-custom-font-sizes' );
+	add_theme_support( 'editor-font-sizes', array()
+		);
+}
+add_action( 'after_setup_theme', 'citadel_disable_editor_settings' );
 
 ?>
