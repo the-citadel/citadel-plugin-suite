@@ -15,7 +15,7 @@ echo '<main id="cps-settings">';
 
 		if ( 'suite-settings' !== $dir ) {
 
-			echo '<label><input type="checkbox" name="cps-option" value="' . $dir . '" checked>' . $cleanDir . '</label><br/>';
+			echo '<label><input type="checkbox" name="cps-option" value="' . $dir . '" checked>' . $cleanDir . '</label>';
 
 		}
 
