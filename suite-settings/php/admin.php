@@ -1,19 +1,28 @@
 <?php
 
-echo '<h1>Citadel Plugin Suite Settings</h1>';
+echo '<main id="cps-settings">';
 
-$directories = glob( CITSUITE__PLUGIN_DIR . '*', GLOB_ONLYDIR );
+	echo '<h1>Citadel Plugin Suite Settings</h1>';
 
-foreach ($directories as $directory) {
+	echo '<form method="post" action="' . plugin_dir_path( __FILE__ ) . 'options.php">';
 
-	$dir = basename( $directory );
+	$directories = glob( CITSUITE__PLUGIN_DIR . '*', GLOB_ONLYDIR );
 
-	if ( 'suite-settings' !== $dir ) {
+	foreach ($directories as $directory) {
 
-		echo '<label><input type="checkbox" checked>' . $dir . '</label><br/>';
+		$dir = basename( $directory );
+		$cleanDir = str_replace("-", " ", $dir);
+
+		if ( 'suite-settings' !== $dir ) {
+
+			echo '<label><input type="checkbox" name="cps-option" value="' . $dir . '" checked>' . $cleanDir . '</label><br/>';
+
+		}
 
 	}
 
-}
+	echo '</form>';
 
-echo '<br/><button>Save Settings</button>';
+	echo submit_button();
+
+echo '</main>';

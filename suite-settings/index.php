@@ -13,6 +13,14 @@ function show_plugin_suite_settings(){
      require_once( plugin_dir_path( __FILE__ ) . 'php/admin.php' );
 }
 
+function cps_scripts() {
+
+	wp_enqueue_style( 'citadel-plugin-suite', plugin_dir_url( __FILE__ ) . 'css/styles.css', [] );
+
+}
+
+add_action( 'admin_enqueue_scripts', 'cps_scripts' );
+
 // Get other sub-plugins
 $directories = glob( CITSUITE__PLUGIN_DIR . '*', GLOB_ONLYDIR );
 
