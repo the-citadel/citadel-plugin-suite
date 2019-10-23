@@ -19,11 +19,8 @@ if ( !function_exists( 'add_action' ) ) {
 	echo 'Hi there! I\'m just a plugin, not much I can do when called directly.';
 }
 
+// Define globals
 define( 'CITSUITE__PLUGIN_DIR', plugin_dir_path( __FILE__ ) );
 
-$directories = glob( CITSUITE__PLUGIN_DIR . '*', GLOB_ONLYDIR );
-
-foreach ($directories as $directory) {
-	$dir = basename( $directory );
-	require_once( CITSUITE__PLUGIN_DIR . $dir . '/index.php' );
-}
+// Require Citadel Suite Settings
+require_once( CITSUITE__PLUGIN_DIR . 'suite-settings/index.php' );
