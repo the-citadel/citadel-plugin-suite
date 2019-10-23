@@ -1,7 +1,18 @@
 <?php 
 
+if ( ! function_exists( 'gutenberg_settings_scripts' ) ) {
+
+	function gutenberg_settings_scripts() {
+
+		wp_enqueue_script( 'citadel-gutenberg-settings-scripts', plugin_dir_url( __FILE__ ) . 'js/scripts.js', [] );
+
+	}
+
+	add_action('admin_enqueue_scripts', 'gutenberg_settings_scripts');
+
+}
+
 add_filter( 'allowed_block_types', 'citadel_allowed_block_types', 10, 2 );
- 
 function citadel_allowed_block_types( $allowed_blocks, $post ) {
  
 	$allowed_blocks = array(
