@@ -97,6 +97,9 @@
 #editor .editor-block-list__block[data-type='core/list']:after {
   content: 'List Block';
 }
+#editor .editor-block-list__block[data-type='core/separator']:after {
+  content: 'Separator';
+}
 #editor .editor-block-list__block[data-type='core/audio']:after {
   content: 'Audio Block';
 }
