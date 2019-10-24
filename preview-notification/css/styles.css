@@ -3,9 +3,34 @@
 	top: 0;
 	left: 50%;
 	padding: 5px 8px;
-	background-color: #7D2935;
+	background-color: red;
 	color: #ffffff;
 	font-size: 12px;
+	font-weight: bold;
 	z-index: 999;
 	transform: translate(-50%, 0);
+}
+
+.cit-preview-alert {
+	box-shadow: 0 0 5px 5px red;
+	position: relative;
+}
+
+.cit-alt-alert::before {
+	content: "This image needs alt text.";
+	position: absolute;
+	bottom: 100%;
+	left: 0;
+	color: #ffffff;
+	background-color: red;
+	z-index: 1;
+	font-size: 12px;
+	padding-left: 5px; 
+	padding-right: 5px; 
+}
+
+.cit-preview-alert img {
+	display: block;
+	position: relative;
+	z-index: 2;
 }
