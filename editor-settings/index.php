@@ -31,7 +31,8 @@ function citadel_allowed_block_types( $allowed_blocks, $post ) {
 		'core/text-columns',
 		'core-embed/youtube',
 		'core-embed/vimeo',
-		'core-embed/ted'
+		'core-embed/ted',
+		'citadel/paragraph',
 	);
  
 	// if( $post->post_type === 'post' ) {
