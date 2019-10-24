@@ -2,13 +2,42 @@
 	position: fixed;
 	top: 0;
 	left: 50%;
-	padding: 5px 8px;
 	background-color: red;
 	color: #ffffff;
-	font-size: 12px;
+	font-size: 14px;
 	font-weight: bold;
 	z-index: 999;
 	transform: translate(-50%, 0);
+}
+
+#preview-message > p {
+	margin: 0;
+	padding: 5px 8px;
+}
+
+#preview-message button {
+	background-color: transparent;
+    color: inherit;
+    font-size: inherit;
+    padding: 0;
+    margin: 0;
+    line-height: inherit;
+    font-weight: inherit;
+    text-decoration: underline;
+}
+
+#preview-message .errors {
+	display: none;
+	background-color: #ffffff;
+	margin: 2px;
+	font-weight: normal;
+	margin-top: 0;
+	color: #282E36;
+}
+
+#preview-message .errors ul {
+	margin: 0;
+	padding: .25rem 1.5rem;
 }
 
 .cit-preview-alert {
@@ -19,11 +48,11 @@
 .cit-alt-alert::before {
 	content: "This image needs alt text.";
 	position: absolute;
-	bottom: 100%;
+	top: 0;
 	left: 0;
 	color: #ffffff;
 	background-color: red;
-	z-index: 1;
+	z-index: 9;
 	font-size: 12px;
 	padding-left: 5px; 
 	padding-right: 5px; 
