@@ -4,7 +4,7 @@ defined( 'ABSPATH' ) || exit;
 
 /*
 --------------------
-Citadel Admin Pending Pages Widget
+Citadel Admin Pending Pages Menu Item
 --------------------
 */
 
@@ -34,6 +34,53 @@ function citadel_plugin_scripts() {
 add_action( 'admin_print_styles', 'citadel_plugin_scripts' );
 
 function citadel_plugin_admin_init(){
-    include( plugin_dir_path( __FILE__ ) . 'php/admin.php');
+?>
+<div class="wrap">
+
+	<h1 class="wp-heading-inline">Outdated Pages</h1>
+	<hr class="wp-header-end">
+	<?php include( plugin_dir_path( __FILE__ ) . 'php/admin.php');?>
+
+		<style type="text/css">
+			.outdated-pages {
+				margin-top: 10px;
+			}
+
+			.outdated-pages .actions a {
+				font-size: 1.2em;
+				margin-right: 10px;
+			}
+
+			.page-numbers {
+				margin-right: 3px;
+			}
+		</style>
+
+</div>
+<?php
+}
+
+/*
+--------------------
+Citadel Admin Pending Pages Dashboard Widget
+--------------------
+*/
+
+function cit_outdated_dashboard_widget() {
+	global $wp_meta_boxes;
+	 
+	wp_add_dashboard_widget(
+		'citadel-outdated-pages',
+		'Outdated Pages',
+		'cit_dashboard_outdated'
+	);
+} add_action('wp_dashboard_setup', 'cit_outdated_dashboard_widget');
+
+function cit_dashboard_outdated() {
+
+
+	include( plugin_dir_path( __FILE__ ) . 'php/admin.php');
+
+
 }
 

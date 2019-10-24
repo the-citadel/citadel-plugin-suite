@@ -26,19 +26,19 @@ function custom_dashboard_help() {
 		<i class="fas fa-fw fa-th-list"></i>
 		<p>My Sites</p>
 	</a>
-	<a href="#" target="_blank" class="quick-link">
+	<a href="https://web.citadel.edu/help/submit-ticket" target="_blank" class="quick-link">
 		<i class="fas fa-fw fa-ticket-alt"></i>
 		<p>Webmaster Request</p>
 	</a>
-	<a href="#" target="_blank" class="quick-link">
+	<a href="https://web.citadel.edu/help" target="_blank" class="quick-link">
 		<i class="fas fa-fw fa-book"></i>
-		<p>WordPress Knowledge Base</p>
+		<p>Knowledge Base</p>
 	</a>
-	<a href="https://new.monsido.com/3457/" target="_blank" class="quick-link">
+	<a href="https://new.monsido.com/3457/domains/6800?domain_group=" target="_blank" class="quick-link">
 		<i class="fas fa-fw fa-universal-access"></i>
-		<p>Accessibility &amp; SEO Tool</p>
+		<p>Accessibility &amp; SEO</p>
 	</a>
-	<a href="#" target="_blank" class="quick-link">
+	<a href="https://web.citadel.edu/policy" target="_blank" class="quick-link">
 		<i class="fas fa-fw fa-file-invoice"></i>
 		<p>Citadel Web Policy</p>
 	</a>
