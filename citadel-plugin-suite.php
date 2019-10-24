@@ -23,4 +23,4 @@ if ( !function_exists( 'add_action' ) ) {
 define( 'CITSUITE__PLUGIN_DIR', plugin_dir_path( __FILE__ ) );
 
 // Require Citadel Suite Settings
-require_once( CITSUITE__PLUGIN_DIR . 'suite-settings/index.php' );
+require_once( CITSUITE__PLUGIN_DIR . 'suite-settings/suite-settings.php' );
