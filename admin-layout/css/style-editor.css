@@ -391,3 +391,8 @@ Editor Styles
 .components-editor-notices__dismissible .components-notice {
   margin-bottom: 0;
 }
+
+#add-post-type-post,
+#add-category {
+  display: none;
+}
