@@ -67,14 +67,14 @@ add_role(
 
 function hide_menu() {
 
-    if ( current_user_can( 'citadel_advanced_editor' ) ) {
-
-        remove_submenu_page( 'themes.php', 'themes.php' ); // hide the theme selection submenu
-
-    }
+	remove_submenu_page( 'themes.php', 'theme-install.php' );
+	remove_submenu_page( 'themes.php', 'theme-editor.php' );
+	remove_submenu_page( 'plugins.php', 'plugin-install.php' );
+	remove_submenu_page( 'plugins.php', 'plugin-editor.php' );
 
     if ( !current_user_can( 'administrator' ) ) {
 
+    	remove_submenu_page( 'themes.php', 'themes.php' );
     	remove_menu_page('profile.php');
         remove_submenu_page('users.php', 'profile.php');
 
