@@ -393,6 +393,8 @@ Editor Styles
 }
 
 #add-post-type-post,
-#add-category {
+#add-category,
+.themes-php .page-title-action,
+.plugins-php .page-title-action {
   display: none;
 }
