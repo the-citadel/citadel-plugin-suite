@@ -63,42 +63,51 @@ add_action( 'wp_network_dashboard_setup', 'citadel_network_add_pending_widget' )
 
 function citadel_network_pending_dashboard_widget_function() {
 	$args = array(
-	  'post_type' => 'page',
-	  'orderby'   => 'date',
-	  'order'     => 'DSC',
-	  'post_status' => 'pending',
-	  'posts_per_page' => -1
+	  'post_type' 		=> 'page',
+	  'orderby'   		=> 'date',
+	  'order'     		=> 'DSC',
+	  'post_status' 	=> 'pending',
 	);
 
-	$subsites = get_sites();
+	$sites = get_sites();
+	$sitesWithPending = [];
+
+	foreach( $sites as $site ) {
+
+		$site_id = get_object_vars( $site )["blog_id"];
+		switch_to_blog( $site_id );
+		$pending_posts = new WP_Query( $args );
+
+		if ( $pending_posts->have_posts() ) {
+
+			array_push( $sitesWithPending, $site_id );
+
+		}
+
+	}
 
 
-	if (! empty ( $subsites )) {
-		echo  '<table class="wp-list-table widefat fixed striped">' .
+	if ( !empty( $sitesWithPending ) ) {
+		echo  '<table class="wp-list-table widefat striped">' .
 				'<thead>' .
 					'<tr>' .
-						'<th class="row-title">Title</th>' .
-						'<th>Author</th>' .
 						'<th>Website</th>' .
-						'<th style="min-width: 100px;">Date</th>' .
+						'<th style="max-width: 100px; text-align: center;"># of Pages</th>' .
 					'</tr>' .
 				'</thead>' .
 				'<tbody>';
-		foreach( $subsites as $subsite ) {
-			$subsite_id = get_object_vars( $subsite )["blog_id"];
-			switch_to_blog( $subsite_id );
+		foreach( $sites as $site ) {
+			$site_id = get_object_vars( $site )["blog_id"];
+			switch_to_blog( $site_id );
 			$pending_posts = new WP_Query( $args );
 
 			if ( $pending_posts->have_posts() ) {
-				while ( $pending_posts->have_posts() ) {
-					$pending_posts->the_post();
-					echo  '<tr>' .
-							'<td class="row-title"><a href="' . get_edit_post_link() . '">' . get_the_title() . '</a></td>' .
-							'<td><a href="mailto:' . get_the_author_meta('email') . '">' . get_the_author() .  '</a></td>' .
-							'<td><a href="' . get_site_url() . '/wp-admin/edit.php?post_status=pending&post_type=page">' . get_bloginfo() . '</a></td>' .
-							'<td style="min-width: 100px;">' . get_the_date() . '</td>' .
-						'</tr>';
-				}
+				$count = $pending_posts->found_posts;
+
+				echo  '<tr>' .
+						'<td><a href="' . esc_url( get_site_url() ) . '">' . get_bloginfo() . '</a></td>' .
+						'<td style="max-width: 100px; text-align: center;"><strong><a href="' . esc_url( get_site_url() ) . '/wp-admin/edit.php?post_status=pending&post_type=page">' . $count . '</a></strong></td>' .
+					'</tr>';
 				
 				wp_reset_postdata();
 			}
@@ -107,7 +116,7 @@ function citadel_network_pending_dashboard_widget_function() {
 		echo    '</tbody>' .
 				'</table>';
 	} else {
-		echo '<p>There are no subsites in this network.</p>';
+		echo '<p>There are no pending pages in this network.</p>';
 	}
 	
 }
